@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Thank You For Giving Us Your Feedback</p>
+    <form id="survey-form">
+        <fieldset>
+            <label id="name-label" for="name">Name
+                <input id="name" type="text" required placeholder="Enter your name"/>
+            </label>
+            <label id="email-label" for="email">Email
+                <input id="email" type="email" required placeholder="Enter your email"/>
+            </label>
+            <label id="number-label" for="number">Number (optional)
+                <input id="number" type="number" min="0" max="99999999999" placeholder="Enter your phone number"/>
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Role Information</legend>
+            <label for="dropdown">Choose what role best describes you</label>
+            <select id="dropdown" required>
+                <option value="">Select your role</option>
+                <option value="customer">Customer</option>
+                <option value="employee">Employee</option>
+            </select>
+        </fieldset>
+        <fieldset>
+            <legend>Recommendation</legend>
+            <label for="never">
+                <input id="never" class="inline" type="radio" value="never" name="recommend"/> Never
+            </label>
+            <label for="maybe">
+                <input id="maybe" class="inline" type="radio" value="maybe" name="recommend"/> Maybe
+            </label>
+            <label for="likely">
+                <input id="likely" class="inline" type="radio" value="likely" name="recommend"/> Likely
+            </label>
+            <label for="definitely">
+                <input id="definitely" class="inline" type="radio" value="definitely" name="recommend"/> Definitely
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Qualities</legend>
+            <label for="safety">
+                <input id="safety" type="checkbox" value="safety" name="qualities"/> Safety
+            </label>
+            <label for="comfort">
+                <input id="comfort" type="checkbox" value="comfort" name="qualities"/> Comfort
+            </label>
+            <label for="pricing">
+                <input id="pricing" type="checkbox" value="pricing" name="qualities"/> Pricing
+            </label>
+            <label for="support">
+                <input id="support" type="checkbox" value="support" name="qualities"/> Customer support and relations
+            </label>
+        </fieldset>
+        <fieldset>
+            <legend>Remarks</legend>
+            <label for="remarks">Remarks</label>
+            <textarea id="remarks" placeholder="Tell us how we can improve..."></textarea>
+            <input id="submit" type="submit" value="Submit"/>
+        </fieldset>
+    </form>
+</body>
+</html>
